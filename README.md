@@ -1,4 +1,4 @@
-![Sreenshot](https://yadi.sk/i/ClNHE8rq3LMCBR)
+![Sreenshot](https://cs541601.userapi.com/c621703/v621703733/5eee/3IFzyNeuJs4.jpg)
 
 # Приложение для управления цветомузыкой
 
