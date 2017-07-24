@@ -1,0 +1,35 @@
+.saturation-value-regulator {
+  flex-grow: 1000;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.saturation-value-regulator .layer {
+  position: absolute;
+  top: 0px; left: 0px; right: 0px; bottom: 0px;
+}
+
+.saturation-value-regulator .mount {
+  background-color: transparent;
+}
+
+.saturation-value-regulator .saturation-gradient {
+  background-image: linear-gradient(to right, white, transparent);
+}
+
+.saturation-value-regulator .lightness-gradient {
+  background-image: linear-gradient(to top, black, transparent);
+}
+
+.saturation-value-regulator .handle {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  border-radius: 44px;
+  background-color: #FFDDDD;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4), inset 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  border: solid 3px #f7f8fc;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}

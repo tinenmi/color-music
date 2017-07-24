@@ -1,0 +1,8 @@
+.toolbox {
+  display: flex;
+  height: 100%;
+}
+
+.toolbox .stretch {
+  flex-grow: 1;
+}

@@ -1,0 +1,13 @@
+.updown {
+  display: flex;
+}
+
+.updown .value{
+  display: block;
+  margin-right: -10px;
+  align-self: center;
+  width: 74px;
+  font: 500 30px "SFUIDisplay";
+  text-align: center;
+  color: #f7f8fc;
+}

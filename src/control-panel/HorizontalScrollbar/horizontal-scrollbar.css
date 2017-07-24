@@ -1,0 +1,15 @@
+.horizontal-scrollbar {
+  width: 100vw;
+  overflow-x: scroll;
+  z-index: 0;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 9.5px;
+}
+
+.horizontal-scrollbar-content {
+  display: flex;
+  flex-direction: row;
+  transform: translateX(0px);
+  transition: transform 100ms;
+  will-change: transform;
+}

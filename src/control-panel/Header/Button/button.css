@@ -1,0 +1,22 @@
+.button{
+  display: block;
+  width: 58px;
+  height: 44px;
+  margin: 10px 0 10px 10px;
+  border-radius: 8px;
+  background-image: linear-gradient(to bottom, #51555d, #42464e);
+  box-shadow: 0 1px 2px 0 rgba(14, 15, 18, 0.8);
+  position: relative;
+  cursor: pointer;
+}
+
+.button .icon{
+  display: block;
+  position: absolute;
+  top: 0; left:0; right:0; bottom:0;
+  background: transparent center center no-repeat;
+}
+
+.button:hover{
+  background-image: linear-gradient(to bottom, #42464e, #51555d);
+}

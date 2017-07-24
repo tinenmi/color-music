@@ -1,0 +1,17 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+header {
+  height: 63px;
+  padding-right: 10px;
+  background-image: linear-gradient(to bottom, #2b2c31, #13161e);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}

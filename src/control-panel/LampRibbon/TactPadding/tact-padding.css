@@ -1,0 +1,18 @@
+.padding-header,  .padding-row {
+  border-bottom: solid 1px #292929;
+  border-right: solid 1px #292929;
+}
+
+.padding-row.right {
+  border-right: none;
+}
+
+.padding-header {
+  width: 5px;
+  height: 17px;
+}
+
+.padding-row {
+  width: 5px;
+  height: 52px;
+}

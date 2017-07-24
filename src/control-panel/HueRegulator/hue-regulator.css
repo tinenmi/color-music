@@ -1,0 +1,26 @@
+.hue-regulator {
+  height:84px;
+  box-sizing: border-box;
+  padding: 27px 15px;
+  background-image: linear-gradient(to bottom, #2b2c31, #13161e);
+}
+
+.hue-regulator .line {
+  height: 30px;
+  border-radius: 8px;
+  background-image: linear-gradient(to left, #ff0000, #ff00ff 17%, #0000ff 31%, #00ffff 50%, #00ff00 68%, #ffff00 83%, #ff0000);
+  position: relative;
+  cursor: pointer;
+}
+
+.hue-regulator .handle {
+  position: absolute;
+  top: -6px;
+  width: 9px;
+  height: 34px;
+  border-radius: 5px;
+  background-color: #9215e7;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4);
+  border: solid 3px #f7f8fc;
+  pointer-events: none;
+}
