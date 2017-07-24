@@ -1,4 +1,4 @@
-![Razzle Logo](https://pp.userapi.com/c837533/v837533010/4bea2/abtNVkuZv4E.jpg)
+![Sreenshot](https://yadi.sk/i/ClNHE8rq3LMCBR)
 
 # Приложение для управления цветомузыкой
 
