@@ -3,9 +3,9 @@ import {readObject, writeObjectDeffered} from '../state-in-file'
 import stateInFile from '../state-in-file.js'
 const filename = "./colorProgram.json"
 
-/*readObject({filename}).then((newColorProgram)=>{
+readObject({filename}).then((newColorProgram)=>{
   state.colorProgram = newColorProgram
-})*/
+})
 
 const newLine = () => {
   return {
