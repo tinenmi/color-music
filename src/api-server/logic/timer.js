@@ -4,7 +4,7 @@ let timerHandlers = [];
 
 let restPeriod = 0;
 export const timerFunction = () => {
-  restPeriod += 1 / 20 / 60 * state.speed;
+  restPeriod += 1 / 10 / 60 * state.speed;
   while(true) {
     timerHandlers.forEach((handler) => {
       handler(restPeriod);
@@ -22,7 +22,7 @@ export const isRunning = () => ({value: state.isRunning})
 export const start = () => {
   state.isRunning = true;
   if (timer == null) {
-    timer = setInterval(timerFunction, 50);
+    timer = setInterval(timerFunction, 25);
   }
   return {value: isRunning}
 }

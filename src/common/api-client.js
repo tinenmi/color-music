@@ -32,6 +32,7 @@ const Api = {
 (['colorProgram', 'cursor', 'isRunning', 'isSmoothly', 'speed']).map(x => Api.pushApiGet(x));
 (['start', 'pause', 'smoothly', 'noSmoothly']).map(x => Api.pushApiPost(x));
 Api.cursorStream = apiStream(PATHS('cursor'))
+Api.colorStream = apiStream(PATHS('colors'))
 Api.setColorProgramCell = apiPost(PATHS('colorProgramCell'),
   {
     tactIndex: 0,
@@ -40,6 +41,7 @@ Api.setColorProgramCell = apiPost(PATHS('colorProgramCell'),
   }
 )
 Api.setSpeed = apiPost(PATHS('speed'), {newValue: 0})
+Api.setCursor = apiPost(PATHS('cursor'), {tactIndex: 0})
 Api.pushApiPost('changeSize', {newSize: 0})
 
 export default Api

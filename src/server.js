@@ -69,6 +69,10 @@ server
     <html lang="">
     <head>
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <link rel="apple-touch-icon" href="public/touch-icon-iphone.png">
+          <link rel="manifest" href="public/manifest.json">
+          <link rel="shortcut icon" href="public/favicon.ico">
         <meta charSet='utf-8' />
         <title>Color Music</title>
         <meta name="viewport" content="width=device-width, user-scalable=no">

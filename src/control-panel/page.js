@@ -43,7 +43,6 @@ export default class Page extends PureComponent {
       this.colorProgramChangeSize()
       api.cursorStream()
       .then((newTactIndex)=>{
-        console.log(newTactIndex)
         const {colorProgram} = this.state
         const {tactIndex} = this.state.cursor
         let newColorProgram = colorProgram;
@@ -142,7 +141,7 @@ export default class Page extends PureComponent {
 
   selectCell = (tactIndex) => (cellIndex) => () => {
       const {colorProgram} = this.state
-      const {isMagick, selected} = this.state
+      const {isMagick, isPlayed, selected} = this.state
       let newColorProgram = immutable.set(colorProgram,
         [ selected.tactIndex, 'cells', selected.cellIndex, 'selected'],
         false
@@ -163,6 +162,12 @@ export default class Page extends PureComponent {
           [tactIndex, 'cells', cellIndex],
           {selected: true, color: magickColor}
         )
+      }
+
+      if (!isPlayed) {
+        api.setCursor({
+          tactIndex
+        })
       }
 
       this.setState({

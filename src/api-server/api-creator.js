@@ -34,8 +34,8 @@ export default class ApiCreator{
         });
       });
     });
-    return {listeners, handler, update: (restPeriod) => {
-      var jsonRes = JSON.stringify(handler(restPeriod));
+    return {listeners, handler, update: (params) => {
+      var jsonRes = JSON.stringify(handler(params));
       listeners.forEach(function(ws) {
         ws.send(jsonRes);
       })

@@ -4,7 +4,7 @@ import {isRunning, start, pause, addTimerHandler} from './logic/timer.js'
 import {isSmoothly, smoothly, noSmoothly} from './logic/smoothly'
 import {getSpeed, setSpeed} from './logic/speed'
 import {getProgram, setProgramCell, changeSize} from './logic/color-program'
-import {getCursor, getColors, increment} from './logic/cursor'
+import {getCursor, setCursor, subscribeCursor, getColors, increment} from './logic/cursor'
 
 export default (routers) => {
   const apiCreator = new ApiCreator(routers)
@@ -17,7 +17,13 @@ export default (routers) => {
     ]
   })
 
-  const cursorStream = apiCreator.streamedValue('cursor', getCursor);
+  apiCreator.post('cursor', setCursor)
+  subscribeCursor(() => {
+    cursorStream.update();
+    colorsStream.update(1)
+  })
+
+  const cursorStream = apiCreator.streamedValue('cursor', getCursor)
   const colorsStream = apiCreator.streamedValue('colors', (restPeriod) => (
     {value: getColors(restPeriod)}
   ));
@@ -27,7 +33,7 @@ export default (routers) => {
       increment()
     }
   })
-  addTimerHandler((restPeriod)=>{
+  addTimerHandler((restPeriod) => {
     if (restPeriod > 1){
       cursorStream.update()
     }

@@ -15,7 +15,7 @@ const TactPadding = ({lampCount, right}) => (
 
 TactPadding.propTypes = {
   lampCount: PropTypes.number.isRequired,
-  right: PropTypes.boolean
+  right: PropTypes.bool
 }
 
 export default TactPadding
